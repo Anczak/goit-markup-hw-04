@@ -5,6 +5,7 @@
   --brand-gray: #757575;
   --brand-bluegray: #f5f4fa;
   --brand-darkgray: #2f303a;
+  --svg-gray: #afb1b8;
   --portfolio-border-gray: #eeeeee;
 }
 * {
@@ -47,8 +48,8 @@ header > div {
 }
 .container-footer {
   display: flex;
-  flex-direction: column;
   padding: 60px 0;
+  gap: 70px;
 }
 header .logo {
   margin-right: 93px;
@@ -78,12 +79,40 @@ header .logo {
   display: flex;
   justify-content: center;
 }
+.footer-socials-header {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700px;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+.footer-socials-list {
+  display: flex;
+  gap: 10px;
+}
+.footer-socials-link {
+  max-width: 44px;
+  max-height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.footer-socials-link:hover {
+  background-color: var(--brand-blue);
+  cursor: pointer;
+}
+.footer-socials-svg {
+  max-width: 20px;
+  max-height: 20px;
+  padding: 12px;
+  fill: white;
+}
 .order-solution {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./../images/main-page-bg.jpg");
+  background: url("./../images/main-page-bg.jpg");
   background-size: cover;
 }
 .order-header {
@@ -126,10 +155,12 @@ header .logo {
 .smartphone {
   max-width: 10px;
   max-height: 16px;
+  fill: var(--svg-gray);
 }
 .envelope {
   max-width: 16px;
   max-height: 12px;
+  fill: var(--svg-gray);
 }
 .contact-list-element {
   display: flex;
@@ -195,7 +226,7 @@ header .logo {
   color: var(--brand-black);
 }
 .team-member-profession {
-  margin: 0 0 30px 0;
+  margin: 0 0 16px 0;
   color: var(--brand-gray);
 }
 .team-member-card {
@@ -207,16 +238,54 @@ header .logo {
     0 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0 0 4px 4px;
 }
+.team-member-social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.team-member-social-link {
+  max-width: 44px;
+  max-height: 44px;
+}
+.team-member-social-link:hover {
+  border-radius: 50px;
+  background-color: var(--brand-blue);
+}
+.team-member-social-svg {
+  max-width: 20px;
+  max-height: 20px;
+  padding: 12px;
+  fill: var(--svg-gray);
+}
+.team-member-social-svg:hover {
+  cursor: pointer;
+  fill: white;
+}
 .our-customers-list {
   display: flex;
   justify-content: center;
   gap: 30px;
+}
+.customer-svg {
+  max-width: 106px;
+  max-height: 60px;
+  border: var(--svg-gray) 1px solid;
+  border-radius: 4px;
+  padding: 16px 32px;
+  fill: var(--svg-gray);
+}
+.customer-svg:hover {
+  cursor: pointer;
+  fill: var(--brand-blue);
+  border-color: var(--brand-blue);
 }
 .our-customers-header {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
   text-align: center;
+  margin-bottom: 50px;
 }
 .our-projects {
   display: flex;
@@ -243,6 +312,8 @@ header .logo {
 .filter-button:hover {
   background-color: var(--brand-blue);
   color: white;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .projects-list {
   display: flex;
@@ -253,6 +324,10 @@ header .logo {
 }
 .project-card {
   border: var(--portfolio-border-gray) solid 1px;
+}
+.project-card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-card-header {
   color: var(--brand-black);
@@ -295,6 +370,10 @@ header .logo {
 .contact:focus {
   color: var(--brand-blue);
 }
+.contact:hover svg,
+.contact:focus svg {
+  fill: var(--brand-blue);
+}
 .logo {
   color: var(--brand-blue);
   font-family: "Raleway", sans-serif;
@@ -302,8 +381,8 @@ header .logo {
   font-weight: 700;
   text-decoration: none;
 }
-footer .logo {
-  margin-bottom: 20px;
+address {
+  margin-top: 20px;
 }
 .logo > span {
   color: var(--brand-black);
