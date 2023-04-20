@@ -11,6 +11,7 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 body {
   letter-spacing: 0.03em;
@@ -51,6 +52,10 @@ header > div {
   padding: 60px 0;
   gap: 70px;
 }
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
 header .logo {
   margin-right: 93px;
 }
@@ -60,7 +65,6 @@ header .logo {
 .section-header-list {
   font-weight: 500;
   font-size: 14px;
-  margin-right: 364px;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -117,7 +121,7 @@ header .logo {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url("./../images/main-page-bg.jpg");
+    url("./../images/main_page_bg.jpg");
   background-size: cover;
 }
 .order-header {
@@ -201,7 +205,6 @@ header .logo {
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
-  text-align: center;
 }
 .our-work-list {
   display: flex;
@@ -344,7 +347,7 @@ header .logo {
 }
 .project-card-desc {
   color: var(--brand-gray);
-  margin: 20px 0 20px 24px;
+  margin: 4px 0 20px 24px;
   line-height: 30px;
 }
 .address-list {
@@ -359,7 +362,6 @@ header .logo {
 }
 .links {
   color: var(--brand-black);
-  text-decoration: none;
   letter-spacing: 0.02em;
 }
 .links:hover,
@@ -368,7 +370,6 @@ header .logo {
 }
 .contact {
   color: var(--brand-gray);
-  text-decoration: none;
   letter-spacing: 0.02em;
 }
 .contact:hover,
@@ -384,7 +385,6 @@ header .logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
   font-weight: 700;
-  text-decoration: none;
 }
 address {
   margin-top: 20px;
